@@ -30,17 +30,17 @@ const S1 = `{
 
 func main() {
   // parse the string to an agnostic object
-	var obj interface{}
-	json.Unmarshal([]byte(S1), &obj)
-
+  var obj interface{}
+  json.Unmarshal([]byte(S1), &obj)
+ 
   // create a new filter
-	f := jfilters.New()
+  f := jfilters.New()
   // define it; by walking the structure
-	fg := f.Key("e").Key("f").Index(1).Key("g")
+  fg := f.Key("e").Key("f").Index(1).Key("g")
   // bind it to our parsed object
-  b := gb.Bind(obj)
+  b := fg.Bind(obj)
   // v contains the value, err any error that occurs during validation
-  v, err := b.GetFloat()
+  v, _ := b.GetFloat()
   fmt.Println(v)
 }
 ```
@@ -51,3 +51,4 @@ func main() {
 - [ ] Document it
 - [ ] Add support for user-supplied callbacks and filters
 - [ ] Add support for composing filters
+
