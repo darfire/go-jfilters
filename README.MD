@@ -9,7 +9,7 @@ package main
 
 import (
   "encoding/json"
-  jfilters "github.com/darfire/json-filters"
+  jfilters "github.com/darfire/go-jfilters"
   "fmt"
 )
 
