@@ -44,3 +44,10 @@ func main() {
   fmt.Println(v)
 }
 ```
+
+### TODO
+- [ ] Test errors
+- [ ] Test map and array
+- [ ] Document it
+- [ ] Add support for user-supplied callbacks and filters
+- [ ] Add support for composing filters
