@@ -20,7 +20,7 @@ const S1 = `{
 }`
 
 func TestFilters(t *testing.T) {
-	var obj map[string]interface{}
+	var obj interface{}
 	json.Unmarshal([]byte(S1), &obj)
 
 	f := New()
